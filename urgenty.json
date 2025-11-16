@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Krajská nemocnice Liberec – Urgentní příjem",
+    "city": "Liberec",
+    "address": "Husova 10, Liberec",
+    "phone": "+420 485 101 111",
+    "url": "https://www.nemlib.cz/"
+  },
+  {
+    "name": "FN Motol – Urgentní příjem",
+    "city": "Praha",
+    "address": "V Úvalu 84, Praha 5",
+    "phone": "+420 224 431 111",
+    "url": "https://www.fnmotol.cz/"
+  },
+  {
+    "name": "FN Bulovka – Emergency",
+    "city": "Praha",
+    "address": "Budínova 2, Praha 8",
+    "phone": "+420 266 081 111",
+    "url": "https://www.bulovka.cz/"
+  },
+  {
+    "name": "FN Ostrava – Urgentní příjem",
+    "city": "Ostrava",
+    "address": "17. listopadu 1790, Ostrava",
+    "phone": "+420 597 371 111",
+    "url": "https://www.fno.cz/"
+  }
+]

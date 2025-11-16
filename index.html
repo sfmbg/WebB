@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odhad naléhavosti – veřejný triážní dotazník</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main>
+      <h1>Mám jít na urgent?</h1>
+
+      <p>
+        <b>Tento dotazník je pouze informativní.</b><br />
+        Nenahrazuje vyšetření lékařem. V případě zhoršení stavu volejte 155.
+      </p>
+
+      <form id="triageForm">
+        <!-- 1) ABCDE screening (zjednodušený pro veřejnost) -->
+        <section>
+          <h2>1) Rychlý screening</h2>
+
+          <h3>A – Dýchací cesty</h3>
+          <label
+            ><input type="checkbox" name="a_duch" /> Lapání po dechu / hrozící
+            dušení</label
+          >
+          <label
+            ><input type="checkbox" name="a_otok" /> Alergická reakce s
+            otokem</label
+          >
+
+          <h3>B – Dýchání</h3>
+          <label
+            >Problémy s dýcháním:
+            <select name="b_dychani">
+              <option value="zadne">žádné</option>
+              <option value="mirne">mírné</option>
+              <option value="vyrazne">výrazné</option>
+              <option value="nemohu">nemohu dýchat</option>
+            </select>
+          </label>
+          <label
+            ><input type="checkbox" name="b_modrani" /> Modrání rtů/prstů</label
+          >
+
+          <h3>C – Oběh</h3>
+          <label
+            ><input type="checkbox" name="c_krvaceni" /> Silné krvácení</label
+          >
+          <label
+            ><input type="checkbox" name="c_hrudnik" /> Silná bolest na
+            hrudi</label
+          >
+          <label><input type="checkbox" name="c_tep" /> Nepravidelný tep</label>
+
+          <h3>D – Vědomí</h3>
+          <label
+            ><input type="checkbox" name="d_vedomi" /> Porucha vědomí</label
+          >
+          <label><input type="checkbox" name="d_krece" /> Křeče</label>
+        </section>
+
+        <!-- 2) Hlavní potíže -->
+        <section>
+          <h2>2) Hlavní potíže</h2>
+
+          <h3>Bolest</h3>
+          <label>Místo bolesti <input name="bolest_misto" required /></label>
+          <label
+            >Intenzita (0–10)
+            <input
+              type="number"
+              name="bolest_skala"
+              min="0"
+              max="10"
+              required
+            />
+          </label>
+
+          <h3>Dýchání a hrudník</h3>
+          <label
+            >Dušnost:
+            <select name="dusnost">
+              <option>žádná</option>
+              <option>lehka</option>
+              <option>stredni</option>
+              <option>tezka</option>
+            </select>
+          </label>
+
+          <h3>Neurologické příznaky</h3>
+          <label
+            ><input type="checkbox" name="neuro_koutek" /> Pokles koutku</label
+          >
+          <label><input type="checkbox" name="neuro_rec" /> Porucha řeči</label>
+          <label
+            ><input type="checkbox" name="neuro_videni" /> Porucha vidění</label
+          >
+          <label
+            ><input type="checkbox" name="neuro_vedomi" /> Ztráta vědomí</label
+          >
+
+          <h3>Úrazy</h3>
+          <label><input type="checkbox" name="uraz_krvaceni" /> Krvácení</label>
+          <label
+            ><input type="checkbox" name="uraz_zlomenina" /> Podezření na
+            zlomeninu</label
+          >
+
+          <h3>Trávení</h3>
+          <label
+            ><input type="checkbox" name="trav_bricho" /> Bolest břicha</label
+          >
+          <label
+            ><input type="checkbox" name="trav_zvraceni" /> Zvracení /
+            průjem</label
+          >
+
+          <h3>Horečka</h3>
+          <label>Teplota <input name="teplota" type="number" /></label>
+        </section>
+
+        <button type="submit">Vyhodnotit</button>
+      </form>
+
+      <div id="result" class="hidden"></div>
+
+      <div id="urgentSelector" class="hidden">
+        <h3>Vyhledejte nejbližší urgentní příjem</h3>
+
+        <input
+          id="urgentSearch"
+          placeholder="Hledejte podle města nebo názvu…"
+        />
+
+        <div id="urgentList" class="urgent-list"></div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
