@@ -1,30 +1,107 @@
 [
   {
-    "name": "Krajská nemocnice Liberec – Urgentní příjem",
+    "name": "Krajská nemocnice Liberec – Oddělení urgentní medicíny",
     "city": "Liberec",
-    "address": "Husova 10, Liberec",
-    "phone": "+420 485 101 111",
-    "url": "https://www.nemlib.cz/"
+    "address": "Husova 1430/34, 460 01 Liberec",
+    "phone": "+420 485 311 111",
+    "url": "https://sfmbg.github.io/WebA/"
   },
   {
     "name": "FN Motol – Urgentní příjem",
     "city": "Praha",
     "address": "V Úvalu 84, Praha 5",
-    "phone": "+420 224 431 111",
+    "phone": "+420 224 438 590",
     "url": "https://www.fnmotol.cz/"
   },
   {
-    "name": "FN Bulovka – Emergency",
+    "name": "FN Bulovka – Oddělení urgentního příjmu",
     "city": "Praha",
-    "address": "Budínova 2, Praha 8",
+    "address": "Budínova 2, 180 00 Praha 8-Bulovka",
     "phone": "+420 266 081 111",
     "url": "https://www.bulovka.cz/"
   },
   {
-    "name": "FN Ostrava – Urgentní příjem",
+    "name": "FN Ostrava – Oddělení centrálního přijmu",
     "city": "Ostrava",
     "address": "17. listopadu 1790, Ostrava",
     "phone": "+420 597 371 111",
     "url": "https://www.fno.cz/"
+  },
+  {
+    "name": "FN u sv. Anny v Brně – Oddělení urgentního příjmu",
+    "city": "Brno",
+    "address": "Pekařská 53, 656 91 Brno",
+    "phone": "+420 543 181 111",
+    "url": "https://www.fnusa.cz/urgentni-prijem/"
+  },
+  {
+    "name": "FN Hradec Králové – Centrální urgentní příjem",
+    "city": "Hradec Králové",
+    "address": "Sokolská 581, 500 05 Hradec Králové",
+    "phone": "+420 495 831 111",
+    "url": "https://www.fnhk.cz/urgentni-prijem-cup"
+  },
+  {
+    "name": "Ústřední vojenská nemocnice – Urgentní příjem",
+    "city": "Praha",
+    "address": "U Vojenské nemocnice 1200, 169 02 Praha 6",
+    "phone": "+420 973 201 111",
+    "url": "https://www.uvn.cz/cs/"
+  },
+  {
+    "name": "FN Plzeň – Urgentní příjem Lochotín",
+    "city": "Plzeň",
+    "address": "Alej Svobody 80, 323 00 Plzeň-Lochotín",
+    "phone": "+420 377 103 111",
+    "url": "https://karim.fnplzen.cz/"
+  },
+  {
+    "name": "Fakultní nemocnice Olomouc – Urgentní příjem",
+    "city": "Olomouc",
+    "address": "Zdravotníků 248/7, 779 00 Olomouc",
+    "phone": "+420 588 441 111",
+    "url": "https://www.fnol.cz/"
+  },
+  {
+    "name": "Nemocnice České Budějovice – Urgentní příjem",
+    "city": "České Budějovice",
+    "address": "B. Němcové 585/54, 370 01 České Budějovice",
+    "phone": "+420 386 411 111",
+    "url": "https://www.nemcb.cz/urgentni-prijem/"
+  },
+  {
+    "name": "Krajská nemocnice T. Bati – Urgentní příjem",
+    "city": "Zlín",
+    "address": "Havlíčkovo nábřeží 600, 760 01 Zlín",
+    "phone": "+420 577 551 111",
+    "url": "https://www.kntb.cz/"
+  },
+  {
+    "name": "Pardubická nemocnice – Urgentní příjem (Budova č. 1)",
+    "city": "Pardubice",
+    "address": "Kyjevská 44, 532 03 Pardubice",
+    "phone": "+420 466 011 111",
+    "url": "https://pardubice.nempk.cz/kliniky-a-pracoviste/urgentni-prijem"
+  },
+  {
+    "name": "Nemocnice Jihlava – Urgentní příjem",
+    "city": "Jihlava",
+    "address": "Vrchlického 59, 586 01 Jihlava",
+    "phone": "+420 567 157 111",
+    "url": "https://www.nemji.cz/oddeleni/urgentni-prijem/"
+  },
+  {
+    "name": "Karlovarská krajská nemocnice – Emergency",
+    "city": "Karlovy Vary",
+    "address": "Bezručova 1190/19, 360 01 Karlovy Vary",
+    "phone": "+420 354 225 111",
+    "url": "https://nemkv.cz/emergency"
+  },
+  {
+    "name": "Masarykova nemocnice Ústí nad Labem – Emergency",
+    "city": "Ústí nad Labem",
+    "address": "Sociální péče 3316/12a, 400 11 Ústí nad Labem",
+    "phone": "+420 477 111 111",
+    "url": "https://www.kzcr.eu/masarykova-nemocnice-usti-nad-labem/"
   }
 ]
