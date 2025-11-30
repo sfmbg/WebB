@@ -3,80 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Odhad naléhavosti – veřejný triážní dotazník</title>
+    <link rel="icon" type="image/svg+xml" href="icon.svg" />
+    <title>Urgentria</title>
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="index.html">
+          <img src="icon.svg" alt="Logo" class="nav-icon" />
+        </a>
+      </div>
+      <div>
+        <a href="index.html">
+          <img src="logo.svg" alt="Urgentria" class="nav-logo" />
+        </a>
+      </div>
+
+      <div class="nav-right">
+        <a href="letak.html" class="nav-link">Informační brožura</a>
+      </div>
+    </nav>
     <main>
       <h1>Mám jít na urgent?</h1>
-
       <p>
-        <b>Tento dotazník je pouze informativní.</b><br />
-        Nenahrazuje vyšetření lékařem. V případě zhoršení stavu volejte 155.
+        <b>Urgentní příjem je určen pro:</b>
+        <ul>
+          <li>pacienty přivezené zdravotnickou záchrannou službou</li>
+          <li>pacienty, kteří přicházejí sami a jsou ve zdravotně nebo životně ohrožujícím stavu</li>
+        </ul>
       </p>
+      <p><b>Typické důvody k návštěvě urgentního příjmu:</b>
+        <ul>
+          <li>ztráta vědomí</li>
+          <li>silná bolest na hrudi</li>
+          <li>závažné úrazy</li>
+          <li>dýchací potíže</li>
+          <li>silná krvácení a jiné akutní stavy</li>
+        </ul>
+      </p>
+      <p>
+        <b>Potíže nevhodné pro urgentní příjem:</b>
+        <ul>
+          <li>chronické potíže pohybového aparátu</li>
+          <li>jiné dlouhodobé či odkladné zdravotní problémy</li>
+        </ul>
+      </p>
+      <p><i>Následující dotazník je pouze informativní a nenahrazuje vyšetření lékařem. V případě zhoršení stavu volejte 155.</br />
+      </i></p>
+      <hr>
 
       <form id="triageForm">
-        <!-- 1) ABCDE screening (zjednodušený pro veřejnost) -->
-        <section>
-          <h2>1) Rychlý screening</h2>
-
-          <h3>A – Dýchací cesty</h3>
-          <label
-            ><input type="checkbox" name="a_duch" /> Lapání po dechu / hrozící
-            dušení</label
-          >
-          <label
-            ><input type="checkbox" name="a_otok" /> Alergická reakce s
-            otokem</label
-          >
-
-          <h3>B – Dýchání</h3>
-          <label
-            >Problémy s dýcháním:
-            <select name="b_dychani">
-              <option value="zadne">žádné</option>
-              <option value="mirne">mírné</option>
-              <option value="vyrazne">výrazné</option>
-              <option value="nemohu">nemohu dýchat</option>
-            </select>
-          </label>
-          <label
-            ><input type="checkbox" name="b_modrani" /> Modrání rtů/prstů</label
-          >
-
-          <h3>C – Oběh</h3>
-          <label
-            ><input type="checkbox" name="c_krvaceni" /> Silné krvácení</label
-          >
-          <label
-            ><input type="checkbox" name="c_hrudnik" /> Silná bolest na
-            hrudi</label
-          >
-          <label><input type="checkbox" name="c_tep" /> Nepravidelný tep</label>
-
-          <h3>D – Vědomí</h3>
-          <label
-            ><input type="checkbox" name="d_vedomi" /> Porucha vědomí</label
-          >
-          <label><input type="checkbox" name="d_krece" /> Křeče</label>
-        </section>
-
         <!-- 2) Hlavní potíže -->
         <section>
-          <h2>2) Hlavní potíže</h2>
+          <h2>1) Hlavní potíže</h2>
 
           <h3>Bolest</h3>
           <label>Popište obtíže* <input name="bolest_misto" required /></label>
+          <label>Délka trvání obtíží* <input name="bolest_delka" required /></label>
           <label
-            >Intenzita (0–10)*
-            <input
-              type="number"
-              name="bolest_skala"
-              min="0"
-              max="10"
-              required
-            />
+            >Intenzita*
+            <select name="bolest_intenzita" required>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
           </label>
 
           <h3>Dýchání a hrudník</h3>
@@ -121,7 +121,50 @@
           <h3>Horečka</h3>
           <label>Teplota <input name="teplota" type="number" /></label>
         </section>
+<!-- 1) ABCDE screening zjednodušený -->
+        <section>
+          <h2>2) Rychlý screening</h2>
 
+          <h3>A – Dýchací cesty</h3>
+          <label
+            ><input type="checkbox" name="a_duch" /> Lapání po dechu / hrozící
+            dušení</label
+          >
+          <label
+            ><input type="checkbox" name="a_otok" /> Alergická reakce s
+            otokem</label
+          >
+
+          <h3>B – Dýchání</h3>
+          <label
+            >Problémy s dýcháním:
+            <select name="b_dychani">
+              <option value="zadne">žádné</option>
+              <option value="mirne">mírné</option>
+              <option value="vyrazne">výrazné</option>
+              <option value="nemohu">nemohu dýchat</option>
+            </select>
+          </label>
+          <label
+            ><input type="checkbox" name="b_modrani" /> Modrání rtů/prstů</label
+          >
+
+          <h3>C – Oběh</h3>
+          <label
+            ><input type="checkbox" name="c_krvaceni" /> Silné krvácení</label
+          >
+          <label
+            ><input type="checkbox" name="c_hrudnik" /> Silná bolest na
+            hrudi</label
+          >
+          <label><input type="checkbox" name="c_tep" /> Nepravidelný tep</label>
+
+          <h3>D – Vědomí</h3>
+          <label
+            ><input type="checkbox" name="d_vedomi" /> Porucha vědomí</label
+          >
+          <label><input type="checkbox" name="d_krece" /> Křeče</label>
+        </section>
         <button type="submit">Vyhodnotit</button>
       </form>
 

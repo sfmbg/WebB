@@ -7,7 +7,12 @@ document.getElementById("triageForm").addEventListener("submit", function (e) {
     document.querySelectorAll("input[type=checkbox]:checked")
   ).map((c) => c.name);
 
-  // ORIENTAČNÍ TRIÁŽ
+  // KONVERZE NA ČÍSLO PRO INTENZITU BOLESTI
+  const bolest = Number(data.bolest_intenzita);
+
+  // -------------------------
+  // ORIENTAČNÍ TRIÁŽ ESI
+  // -------------------------
   let priority = "ESI5";
 
   // ESI1 – kritické
@@ -24,46 +29,39 @@ document.getElementById("triageForm").addEventListener("submit", function (e) {
     "neuro_videni",
     "neuro_vedomi",
   ];
+
   if (checked.some((c) => ESI1.includes(c)) || data.b_dychani === "nemohu") {
     priority = "ESI1";
   }
 
-  // -----------------------
-  // ESI2 – UPRAVENO PODLE SCRIPTU A
-  // -----------------------
-  const ESI2_list = ["dusnost_stredni", "uraz_mech", "c_tep"];
+  // ESI2 – vysoká urgentnost
+  const ESI2_list = ["c_tep", "uraz_mech"]; // kompatibilní se strukturou
 
   if (priority === "ESI5" || priority === "ESI4" || priority === "ESI3") {
     if (
-      data.b_dychani === "vyrazne" || // výrazné dýchání
-      Number(data.bolest_skala) >= 7 || // bolest 7–10
-      checked.some((c) => ESI2_list.includes(c)) || // 3 checkboxy
-      data.dusnost === "těžká" // těžká dušnost
+      data.b_dychani === "vyrazne" ||
+      bolest >= 7 ||
+      checked.some((c) => ESI2_list.includes(c)) ||
+      data.dusnost === "těžká"
     ) {
       priority = "ESI2";
     }
   }
 
-  // -----------------------
-  // ESI3 – UPRAVENO PODLE SCRIPTU A
-  // -----------------------
+  // ESI3
   if (priority === "ESI5" || priority === "ESI4") {
-    if (
-      Number(data.bolest_skala) >= 4 || // bolest 4–6
-      data.dusnost === "střední" // střední dušnost
-    ) {
+    if (bolest >= 4 || data.dusnost === "střední") {
       priority = "ESI3";
     }
   }
 
   // ESI4
   if (priority === "ESI5") {
-    if (Number(data.bolest_skala) >= 1) {
+    if (bolest >= 1) {
       priority = "ESI4";
     }
   }
 
-  // ČEKACÍ DOBY
   const waitTimes = {
     ESI1: "0 minut – okamžitě",
     ESI2: "do 10 minut",
@@ -94,10 +92,11 @@ document.getElementById("triageForm").addEventListener("submit", function (e) {
     <hr>
     <p><small>Tento nástroj je pouze orientační a nenahrazuje lékařské vyšetření.</small></p>
   `;
+
+  // URGENTNÍ PŘÍJMY
   document.getElementById("urgentSelector").classList.remove("hidden");
   loadUrgents();
 
-  // Po zobrazení výsledku → zobrazit seznam urgentů
   function loadUrgents() {
     fetch("urgenty.json")
       .then((r) => r.json())
@@ -116,11 +115,11 @@ document.getElementById("triageForm").addEventListener("submit", function (e) {
       div.classList.add("urgent-item");
 
       div.innerHTML = `
-      <b>${item.name}</b><br>
-      ${item.address}<br>
-      Tel: ${item.phone}<br>
-      <a href="${item.url}" target="_blank">Otevřít web</a>
-    `;
+        <b>${item.name}</b><br>
+        ${item.address}<br>
+        Tel: ${item.phone}<br>
+        <a href="${item.url}" target="_blank">Otevřít web</a>
+      `;
 
       container.appendChild(div);
     });

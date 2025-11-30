@@ -8,19 +8,19 @@ body {
 main {
   max-width: 800px;
   margin: 2rem auto;
-  background: white;
+  background: #ffffff;
   padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-  color: #cf404c;
+  color: #ff3131;
   text-align: center;
 }
 h2 {
   margin-top: 2rem;
-  color: #004773;
+  color: #0cc0df;
 }
 
 label {
@@ -44,7 +44,7 @@ textarea {
 button {
   margin-top: 2rem;
   padding: 1rem 1.5rem;
-  background: #cf404c;
+  background: #ff3131;
   color: white;
   border: none;
   border-radius: 8px;
@@ -119,4 +119,48 @@ button[type="submit"] {
 
 .urgent-item a:hover {
   text-decoration: underline;
+}
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.nav-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+.nav-logo {
+  width: 130px;
+  height: 120px;
+  object-fit: contain;
+}
+.nav-link {
+  color: #ff3131;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.nav-link:hover {
+  color: #912e36;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #dfdfdf;
+  margin: 2rem 0;
+}
+
+li {
+  margin-bottom: 0.4rem;
 }
