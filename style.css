@@ -62,7 +62,7 @@ button:hover {
 input[type="checkbox"] {
   width: auto !important;
   margin-right: 0.5rem;
-  transform: translateY(1px); /* lehká úprava pro perfektní zarovnání */
+  transform: translateY(1px);
 }
 
 label:has(input[type="checkbox"]) {
