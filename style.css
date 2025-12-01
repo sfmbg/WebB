@@ -164,3 +164,7 @@ hr {
 li {
   margin-bottom: 0.4rem;
 }
+
+.poster {
+  width: 100%;
+}
