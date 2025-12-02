@@ -72,9 +72,9 @@ document.getElementById("triageForm").addEventListener("submit", function (e) {
   const waitTimes = {
     ESI1: "0 minut – okamžitě",
     ESI2: "do 10 minut",
-    ESI3: "do 30 minut",
-    ESI4: "60–120 minut",
-    ESI5: "dle vytíženosti",
+    ESI3: "do 60 minut",
+    ESI4: "do 120 minut",
+    ESI5: "do 6 hodin",
   };
 
   // SCHOVAT FORMULÁŘ
